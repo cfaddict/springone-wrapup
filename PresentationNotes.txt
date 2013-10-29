@@ -1,4 +1,55 @@
+Slide 1 (Title Slide)
+---------------------------------------------------------------------------------------
+ - Eric's Presentation (Same Format)
+
+
+Slide 13/1 (Groovy Consle + Demos)
+---------------------------------------------------------------------------------------
+	+ Show settings and what they do like
+	  -- View   -> Clear output
+	  -- View   -> Auto Clear
+	  -- View   -> Show Script in output
+	  -- View   -> Change font size
+	  -- Script -> Run / Run Selection
+	  -- Script -> Add JARs (query db example @grab AST later)
+	  -- Script -> AST (Show Person Class and walk through source code) 
+	  				   (Also really handy when developing AST Transformations)
+	+ Playground
+	  -- Write some code (/demos/console/scripts.groovy)
+	  -- Write full classes (/demos/console/Person.groovy)
+
+	+ run command grails console
+	  -- Show a project in intelliJ and how you can't write code against your project
+	  -- run grails code and do some GORM stuff  
+
+Slide 14 (Metaprogramming)
+---------------------------------------------------------------------------------------
+	+ What is metaprogramming - move down to definition slide
+
+Slide 15 (Categories)
+---------------------------------------------------------------------------------------
+	+ 
+
+
+Slide 16 (ExpandoMetaClass)
+---------------------------------------------------------------------------------------
+	+ Code Demos
+		-- Show a class that you can't add methods and properties to
+		   - dump the expando class after its instatiated to show that it has no
+		     properties or methods but what makes it special is that you can add to it.
+		-- Show the expando class in action (and Groovy API)
+		-- Show us adding to a class that we build
+		-- Show us adding methods to a class that already exists
+		   **** THIS IS GREAT FOR WORKING WITH EXISTING APIs
+
+	+ Notes
+		-- Not available from Java Classes
+
+Classes
+---------------------------------------------------------------------------------------
+
 Metaobject Protocol
---------------------------------------------------------------------------
 http://groovy.codehaus.org/api/groovy/lang/MetaObjectProtocol.html
 
+ExpandoMetaClass
+http://groovy.codehaus.org/api/groovy/lang/ExpandoMetaClass.html
