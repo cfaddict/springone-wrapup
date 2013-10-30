@@ -2,9 +2,9 @@
 def msg = "Hello Groovy!"
 
 // arrays (ArrayList)
-def people = ["Dan","Lance","Sam"]
+def people = ["Dan","Lance","Sam","Chris","Nate"]
 
-// maps (HashMap)
+// maps (HashMap) (Structs from the CF World)
 def person = [first:"Dan",last:"Vega",city:"Cleveland"]
 
 // closures

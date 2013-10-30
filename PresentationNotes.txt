@@ -1,6 +1,13 @@
-Slide 1 (Title Slide)
+Slide 0 (Title Slide)
 ---------------------------------------------------------------------------------------
+ - Before we get started here is the slide deck and demo code
+ - Introduction
  - Eric's Presentation (Same Format)
+
+Slide 10 (Installation GVM)
+---------------------------------------------------------------------------------------
+ - No dependencies needed to install / no environment variables to setup
+   -- You SHOULD have the java jdk installed though to run groovy/grails/etc
 
 
 Slide 13/1 (Groovy Consle + Demos)
@@ -10,6 +17,7 @@ Slide 13/1 (Groovy Consle + Demos)
 	  -- View   -> Auto Clear
 	  -- View   -> Show Script in output
 	  -- View   -> Change font size
+	  -- View   -> Show toolbar
 	  -- Script -> Run / Run Selection
 	  -- Script -> Add JARs (query db example @grab AST later)
 	  -- Script -> AST (Show Person Class and walk through source code) 
@@ -21,14 +29,17 @@ Slide 13/1 (Groovy Consle + Demos)
 	+ run command grails console
 	  -- Show a project in intelliJ and how you can't write code against your project
 	  -- run grails code and do some GORM stuff  
+	  -- tools > grails > run target > grails console
+	  -- demos/console/bookscript.groovy
 
 Slide 14 (Metaprogramming)
 ---------------------------------------------------------------------------------------
+	+ talk through bullet points
 	+ What is metaprogramming - move down to definition slide
 
 Slide 15 (Categories)
 ---------------------------------------------------------------------------------------
-	+ 
+	+ run demo (/demos/metaprogramming/categories.groovy)
 
 
 Slide 16 (ExpandoMetaClass)
@@ -45,6 +56,37 @@ Slide 16 (ExpandoMetaClass)
 	+ Notes
 		-- Not available from Java Classes
 
+Slide 17 (Metaobject Protocol (MOP) )
+---------------------------------------------------------------------------------------
+	+ First we want to talk about the process groovy takes to call a method
+		-- use the diagram
+	+ 2 approaches in Groovy to intercept method calls: either let the object do it 
+	  or let its MetaClass do it
+	+ invokeMethod()
+	  	-- hijacks all calls to the object (event dynamically added methods)
+	  	-- AOP before/after/around
+	  	-- Suppose we want to run filters sucha as validation, login verification, logging, etc...
+	  	-- System.out.println gotcha
+	+ missingMethod()
+		-- When a method is not found (or intercepted by invokeMethod)
+		-- GORM Dynamic Finders - findByFirstNameLastName
+		-- "Intercept, Cache, Invoke" Pattern
+		-- run demo (/demos/metaprogramming/methodMissing.groovy)
+
+	+ when to use invoke vs methodMissing
+		-- if we are interested in intercepting calls to non existant methods we should use methodMissing
+
+Slide 18 ( AST Transformations )
+---------------------------------------------------------------------------------------
+	+ What are AST Transformations? 
+		-- Compile-time metaprogramming is an advanced feature that's useful in some special situations
+		   and is mostly used by framework/tool writers.
+		-- Spring Security
+	+ There are some built in ones though that we can take advantage of right out of the box
+		-- Show ToString demo
+		-- Show grape demo
+
+
 Classes
 ---------------------------------------------------------------------------------------
 
@@ -53,3 +95,14 @@ http://groovy.codehaus.org/api/groovy/lang/MetaObjectProtocol.html
 
 ExpandoMetaClass
 http://groovy.codehaus.org/api/groovy/lang/ExpandoMetaClass.html
+
+
+Links to Start the presentation with
+---------------------------------------------------------------------------------------
+
+http://groovy.codehaus.org/api/
+https://github.com/cfaddict/springone-wrapup
+http://grails.org/doc/latest/guide/GORM.html#basicCRUD
+
+OPEN IntelliJ
+HAVE CLOCK GOING ON MACBOOK

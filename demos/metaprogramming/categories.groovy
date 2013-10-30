@@ -29,6 +29,8 @@ use(StringUtils) {
     "hello firstcomp".shout(true)
 }
 
+/*--------------------------------------------------------------------------------------------*/
+
 // the methods we injected were only available in the closure block
 try {
     "6045551234".formatPhone()

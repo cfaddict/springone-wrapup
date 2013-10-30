@@ -72,7 +72,6 @@
 					<section><img src="images/ggbridge.jpeg"/></section>
 					<section><img src="images/alcatraz.jpeg"/></section>
 					<section><img src="images/pier.jpeg"/></section>
-					<section><img src="images/lance.jpeg"/></section>
 				</section>				
 
 				<section>
@@ -134,10 +133,11 @@
 						<li>Managing Multiple Versions of SDKs</li>
 						<li>Groovy Console</li>
 						<li>Meta Programming</li>
-						<li>REST Support in Grails 2.3</li>
+						<li>Domain Object Binding</li>
+						<li>Controller Error Handling</li>
 						<li>Spock (Testing Framework)</li>
 						<li>Transaction Handling</li>
-						<li>Controller Error Handling</li>
+						<li>RESTful Domain Classes</li>
 					</ul>
 				</section>
 
@@ -228,6 +228,7 @@
 						<li>Manage parallel Versions of multiple SDKs</li>
 						<li>Easy to install/list/switch/remove Candidates</li>
 						<li>Windows/Mac/Linux - Use it</li>
+						<li>Questions?</li>
 					</ul>
 				</section>
 
@@ -237,6 +238,7 @@
 						<blockquote>The Groovy Swing Console allows a user to enter and run Groovy Classes or Scripts.</blockquote>
 					</section>
 					<section><h1>DEMO</h1></section>
+					<section><h1>QUESTIONS?</h1></section>
 				</section>
 
 				<section>
@@ -256,6 +258,7 @@
 							Compile Time
 							<ul>
 								<li>AST Transformations</li>
+								<li>Extensions</li>
 							</ul>
 						</li>
 					</ul>
@@ -265,7 +268,8 @@
 						<blockquote>Metaprogramming is the writing of programs that write or manipulate other programs, including themselves.</blockquote>
 						<br/>
 						<small>Read your Programming Groovy 2 book</small>
-					</section>					
+					</section>	
+					<section><img src="images/uncleben.png"/></section>
 				</section>
 
 				<section>
@@ -296,37 +300,53 @@
 					<section>
 						<h1>Metaobject Protocol (MOP)</h1>
 						<ul>
+							<li>What happens when Groovy calls a method</li>
 							<li>
-								Intercepting method calls using MOP
+								Intercepting Methods
 								<ul>
-									<li>All Methods</li>
-									<li>Nonexistant Methods</li>
+									<li>invokeMethod()</li>
+									<li>missingMethod()</li>
 								</ul>
 							</li>
-							<li>
-								MOP Method Synthesis
-								<ul>
-									<li>Method Injection vs Methods Synthesis</li>
-									<li>"Intercept, Cache, Invoke" Pattern</li>
-								</ul>
-							</li>
+							<li>AOP Made Easy</li>
+							<li>Object vs MetaClass</li>
 						</ul>
 					</section>
 					<section><img src="images/groovy_method_handling.png"/></section>
-					<section><img src="images/invokeMethod.png"/></section>
-					<section><img src="images/methodMissing.png"/></section>
+					<section><h1>Invoke Method DEMO</h1></section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Missing Method</h1>
+						<ul>
+							<li>When a method is not found (or intercepted by invokeMethod)</li>
+							<li>GORM Dynamic Finders - findByFirstNameLastName</li>
+							<li>"Intercept, Cache, Invoke" Pattern</li>		
+							<li>
+								When to use invoke vs methodMissing<br/>
+								<small>If we are interested in intercepting calls to non existant methods we should use methodMissing</small>
+							</li>				
+						</ul>						
+					</section>
+					<section><h1>DEMO</h1></section>
 				</section>
 
 				<section>
 					<h1>AST Transformations</h1>
 					<ul>
-						<li>@ToString</li>
-						<li>@EqualsAndHashCode</li>
-						<li>@Delegate</li>
-						<li>@Singleton</li>
-						<li>@TypeChecked</li>
-						<li>@YourOwnAST</li>
+						<li>Compile-Time Metaprogramming</li>
+						<li>
+							Local AST vs Build your own
+							<ul>
+								<li>@ToString / @EqualsAndHashCode</li>
+								<li>@Delegate / @Singleton</li>
+								<li>@TypeChecked</li>
+								<li>@Grab</li>
+							</ul>						
+						</li>						
 					</ul>
+
 				</section>
 
 				<!-- END DAN -->
@@ -365,17 +385,23 @@
 					<ul>
 						<li>
 							Groovy API<br/>
-							<a href="http://groovy.codehaus.org/api/" target="_blank">http://groovy.codehaus.org/api/</a>
+							<small><a href="http://groovy.codehaus.org/api/" target="_blank">http://groovy.codehaus.org/api/</a></small>
 						</li>
-						<br/>
 						<li>
-							What's New in Grails 2.3
-							<a href="http://grails.org/doc/latest/guide/introduction.html#whatsNew23" target="_blank">http://grails.org/doc/latest/guide/introduction.html#whatsNew23</a>
+							What's New in Grails 2.3<br/>
+							<small><a href="http://grails.org/doc/latest/guide/introduction.html#whatsNew23" target="_blank">http://grails.org/doc/latest/guide/introduction.html#whatsNew23</a></small>
 						</li>
-						<br/>
+						<li>
+							Slide Deck<br/>
+							<small><a href="https://github.com/cfaddict/springone-wrapup">https://github.com/cfaddict/springone-wrapup</a></small>
+						</li>
+						<li>
+							Reveal.JS<br/>
+							<small><a href="http://lab.hakim.se/reveal-js/#/">http://lab.hakim.se/reveal-js/#/</a></small>
+						</li>
 						<li>
 							THE Dan Vega<br/>
-							<a href="http://www.thedanvega.com" target="_blank">http://www.thedanvega.com</a>
+							<small><a href="http://www.thedanvega.com" target="_blank">http://www.thedanvega.com</a></small>
 						</li>
 					</ul>
 				</section>

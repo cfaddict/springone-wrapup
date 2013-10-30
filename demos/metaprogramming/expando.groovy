@@ -8,24 +8,22 @@ p.name = "Dan"
 p.greet = { println "Hello ${name}" }
 p.greet()
 
+/*--------------------------------------------------------------------------------------------*/
 
-// http://groovy.codehaus.org/api/groovy/util/Expando.html
+http://groovy.codehaus.org/api/groovy/util/Expando.html
 Expando ex = new Expando()
 ex.name = "Dan"
 ex.greet = { println "Hello ${name}!" }
 
 ex.greet()
+println ex.class.name
 
-
-// Every class in groovy has a property called metaClass 
-// The metaClass is an Expando
-def names = ["Dan","Nate","Jake","Brian"]
-names.class
-
-println String.metaClass.class.name
+/*--------------------------------------------------------------------------------------------*/
 
 // expandoMetaClass
-// every class in groovy has a method class
+// every class in groovy has a metaclass
+// these are instance methods for all Dogs
+// you can do this per instance method
 class Dog {
 
 }
@@ -34,9 +32,8 @@ Dog.metaClass.speak = { println 'Woof!' }
 Dog dog = new Dog()
 dog.speak() 
 
-// these are instance methods for all Dogs
-// show a per instance method
-// show a static method
+/*--------------------------------------------------------------------------------------------*/
+
 
 // what about a class we didn't define
 String msg = 'hello world'
@@ -48,3 +45,5 @@ String.metaClass.shout = { ->
 }
 
 msg.shout()
+
+// java.lang.String is Final - How cool is that?

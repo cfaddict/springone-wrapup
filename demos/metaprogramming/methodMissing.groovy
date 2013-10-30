@@ -5,9 +5,7 @@ class Person {
         // intercept
         if( name == 'greet' ) {
             // define implementation
-            def impl = { methodArgs ->
-                println "Hello ${methodArgs[0]}!"
-            }
+            def impl = {println "Hello ${args[0]}!"}
             // cache
             Person.metaClass."$name" = impl
             // invoke 
