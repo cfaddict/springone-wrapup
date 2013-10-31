@@ -12,6 +12,10 @@ p.greet()
 
 http://groovy.codehaus.org/api/groovy/util/Expando.html
 Expando ex = new Expando()
+println ex 
+
+// show that it has no methods or properties
+
 ex.name = "Dan"
 ex.greet = { println "Hello ${name}!" }
 

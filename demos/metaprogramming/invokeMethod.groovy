@@ -103,6 +103,8 @@ class Person implements GroovyInterceptable {
 def p = new Person()
 p.someMethod("foo")
 
+/*--------------------------------------------------------------------------------------------*/
+
 
 // What about when we don't have access to the source code
 class Person {

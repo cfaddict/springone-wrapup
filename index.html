@@ -185,7 +185,7 @@
 				<section>
 					<h1>The Solution</h1>
 					<h3>GVM - the Groovy enVironment Manager<h3>
-					<small><a href="http://gvmtool.net/">http://gvmtool.net</a></small>
+					<small><a href="http://gvmtool.net/" target="_blank">http://gvmtool.net</a></small>
 				</section>
 
 				<section>
@@ -309,11 +309,22 @@
 								</ul>
 							</li>
 							<li>AOP Made Easy</li>
-							<li>Object vs MetaClass</li>
 						</ul>
 					</section>
 					<section><img src="images/groovy_method_handling.png"/></section>
-					<section><h1>Invoke Method DEMO</h1></section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Invoke Method</h1>
+						<ul>
+							<li>Hijacks all method calls to the object (even dynamically added)</li>
+							<li>AOP before/after/around</li>
+							<li>Suppose we want to run filters sucha as validation, login verification, logging, etc...</li>
+							<li>println gotcha</li>
+						</ul>
+					</section>
+					<section><h1>DEMO</h1></section>
 				</section>
 
 				<section>
@@ -333,20 +344,26 @@
 				</section>
 
 				<section>
-					<h1>AST Transformations</h1>
-					<ul>
-						<li>Compile-Time Metaprogramming</li>
-						<li>
-							Local AST vs Build your own
-							<ul>
-								<li>@ToString / @EqualsAndHashCode</li>
-								<li>@Delegate / @Singleton</li>
-								<li>@TypeChecked</li>
-								<li>@Grab</li>
-							</ul>						
-						</li>						
-					</ul>
-
+					<section>
+						<h1>AST Transformations</h1>
+						<ul>
+							<li>Compile-Time Metaprogramming</li>
+							<li>
+								Local AST vs Build your own
+								<ul>
+									<li>@ToString / @EqualsAndHashCode</li>
+									<li>@Delegate / @Singleton</li>
+									<li>@TypeChecked</li>
+									<li>@Grab</li>
+								</ul>						
+							</li>
+							<li>
+								Compiler Phases<br/>
+								<small><a href="http://groovy.codehaus.org/Compiler+Phase+Guide">http://groovy.codehaus.org/Compiler+Phase+Guide</a></small>
+							</li>							
+						</ul>
+					</section>
+					<section><h1>DEMO</h1></section>
 				</section>
 
 				<!-- END DAN -->
